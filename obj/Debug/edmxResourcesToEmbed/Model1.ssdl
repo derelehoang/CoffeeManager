@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="COFFEE_MANAGERMENTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ACCOUNT">
+    <Key>
+      <PropertyRef Name="USRERNAME" />
+    </Key>
+    <Property Name="USRERNAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DISPLAYNAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PASSWORD" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="TYPE" Type="int" />
+  </EntityType>
+  <EntityType Name="BILL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DATE_CHECKIN" Type="date" Nullable="false" />
+    <Property Name="DATE_CHECKOUT" Type="date" Nullable="false" />
+    <Property Name="ID_TABLE" Type="int" Nullable="false" />
+    <Property Name="STATUS" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BILL_INFO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_BILL" Type="int" Nullable="false" />
+    <Property Name="ID_DRINK" Type="int" Nullable="false" />
+    <Property Name="COUNT" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DRINK">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ID_CATEGORY" Type="int" Nullable="false" />
+    <Property Name="PRICE" Type="float" />
+  </EntityType>
+  <EntityType Name="DRINK_CATEGORY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TABLE_DRINK">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="STATUS" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__BILL__ID_TABLE__1CF15040">
+    <End Role="TABLE_DRINK" Type="Self.TABLE_DRINK" Multiplicity="1" />
+    <End Role="BILL" Type="Self.BILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TABLE_DRINK">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BILL">
+        <PropertyRef Name="ID_TABLE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BILL_INFO__COUNT__20C1E124">
+    <End Role="BILL" Type="Self.BILL" Multiplicity="1" />
+    <End Role="BILL_INFO" Type="Self.BILL_INFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BILL">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BILL_INFO">
+        <PropertyRef Name="ID_BILL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BILL_INFO__ID_DR__21B6055D">
+    <End Role="DRINK" Type="Self.DRINK" Multiplicity="1" />
+    <End Role="BILL_INFO" Type="Self.BILL_INFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DRINK">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BILL_INFO">
+        <PropertyRef Name="ID_DRINK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="COFFEE_MANAGERMENTModelStoreContainer">
+    <EntitySet Name="ACCOUNT" EntityType="Self.ACCOUNT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BILL" EntityType="Self.BILL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BILL_INFO" EntityType="Self.BILL_INFO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DRINK" EntityType="Self.DRINK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DRINK_CATEGORY" EntityType="Self.DRINK_CATEGORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TABLE_DRINK" EntityType="Self.TABLE_DRINK" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__BILL__ID_TABLE__1CF15040" Association="Self.FK__BILL__ID_TABLE__1CF15040">
+      <End Role="TABLE_DRINK" EntitySet="TABLE_DRINK" />
+      <End Role="BILL" EntitySet="BILL" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BILL_INFO__COUNT__20C1E124" Association="Self.FK__BILL_INFO__COUNT__20C1E124">
+      <End Role="BILL" EntitySet="BILL" />
+      <End Role="BILL_INFO" EntitySet="BILL_INFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BILL_INFO__ID_DR__21B6055D" Association="Self.FK__BILL_INFO__ID_DR__21B6055D">
+      <End Role="DRINK" EntitySet="DRINK" />
+      <End Role="BILL_INFO" EntitySet="BILL_INFO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
