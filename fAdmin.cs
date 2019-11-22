@@ -40,7 +40,7 @@ namespace Coffee_Managerment
         }
         void LoadAccountList()
         {
-            string connectionSTR = @"Data Source=DESKTOP-IKCEBER\PHUONGANH;Initial Catalog=COFFEE_MANAGERMENT;User ID=sa; Password=110220";
+            string connectionSTR = @"Data Source=HUYHOANG-PC\HUYHOANG;Initial Catalog=COFFEE_MANAGERMENT;Persist Security Info=True;User ID=sa; Password=12112000";
             SqlConnection connection = new SqlConnection(connectionSTR);
 
             string query = "SELECT * FROM ACCOUNT";
