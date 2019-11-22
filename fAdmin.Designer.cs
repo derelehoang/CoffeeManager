@@ -30,39 +30,43 @@
         {
             this.tbAdmin = new System.Windows.Forms.TabControl();
             this.tbBill = new System.Windows.Forms.TabPage();
-            this.tpDrink = new System.Windows.Forms.TabPage();
-            this.tpCategoryDrink = new System.Windows.Forms.TabPage();
-            this.tpTable = new System.Windows.Forms.TabPage();
-            this.tpAccount = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dtgvBill = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnViewBill = new System.Windows.Forms.Button();
             this.dtpkToDate = new System.Windows.Forms.DateTimePicker();
             this.dtpkFromDate = new System.Windows.Forms.DateTimePicker();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.dtgvBill = new System.Windows.Forms.DataGridView();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.tpDrink = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.dtgkDrink = new System.Windows.Forms.DataGridView();
-            this.btnAddDrink = new System.Windows.Forms.Button();
-            this.btnDeleteDrink = new System.Windows.Forms.Button();
-            this.btnEditDrink = new System.Windows.Forms.Button();
-            this.btnShowDrink = new System.Windows.Forms.Button();
-            this.btnSearchDrink = new System.Windows.Forms.Button();
             this.txtSearchDrinkName = new System.Windows.Forms.TextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.lblID_Drink = new System.Windows.Forms.Label();
-            this.txtDrinkID = new System.Windows.Forms.TextBox();
+            this.btnSearchDrink = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.nmDrinkPrice = new System.Windows.Forms.NumericUpDown();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.cbDrinkCategory = new System.Windows.Forms.ComboBox();
+            this.lblDrinkCategory = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.txtDrinkName = new System.Windows.Forms.TextBox();
             this.lblAddDrink = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.lblDrinkCategory = new System.Windows.Forms.Label();
-            this.cbDrinkCategory = new System.Windows.Forms.ComboBox();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.nmDrinkPrice = new System.Windows.Forms.NumericUpDown();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.txtDrinkID = new System.Windows.Forms.TextBox();
+            this.lblID_Drink = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.dtgkDrink = new System.Windows.Forms.DataGridView();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnShowDrink = new System.Windows.Forms.Button();
+            this.btnEditDrink = new System.Windows.Forms.Button();
+            this.btnDeleteDrink = new System.Windows.Forms.Button();
+            this.btnAddDrink = new System.Windows.Forms.Button();
+            this.tpCategoryDrink = new System.Windows.Forms.TabPage();
+            this.dtgvCategory = new System.Windows.Forms.DataGridView();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.btnShowCategory = new System.Windows.Forms.Button();
+            this.btnEditCategory = new System.Windows.Forms.Button();
+            this.btnDeleteCategory = new System.Windows.Forms.Button();
+            this.btnAddCategory = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -70,28 +74,24 @@
             this.panel19 = new System.Windows.Forms.Panel();
             this.txtCategory_ID = new System.Windows.Forms.TextBox();
             this.lblCategoryID = new System.Windows.Forms.Label();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblTableName = new System.Windows.Forms.Label();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.lblStatusTable = new System.Windows.Forms.Label();
-            this.cbStatusTable = new System.Windows.Forms.ComboBox();
-            this.dtgvCategory = new System.Windows.Forms.DataGridView();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.btnShowCategory = new System.Windows.Forms.Button();
-            this.btnEditCategory = new System.Windows.Forms.Button();
-            this.btnDeleteCategory = new System.Windows.Forms.Button();
-            this.btnAddCategory = new System.Windows.Forms.Button();
+            this.tpTable = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel14 = new System.Windows.Forms.Panel();
             this.btnShowTable = new System.Windows.Forms.Button();
             this.btnEditTable = new System.Windows.Forms.Button();
             this.btnDeleteTable = new System.Windows.Forms.Button();
             this.btnAddTable = new System.Windows.Forms.Button();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.cbStatusTable = new System.Windows.Forms.ComboBox();
+            this.lblStatusTable = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblTableName = new System.Windows.Forms.Label();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tpAccount = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnShowAccount = new System.Windows.Forms.Button();
             this.btnEditAccount = new System.Windows.Forms.Button();
@@ -99,6 +99,7 @@
             this.btnAddAcount = new System.Windows.Forms.Button();
             this.dtgvAccount = new System.Windows.Forms.DataGridView();
             this.panel22 = new System.Windows.Forms.Panel();
+            this.btnResertPassWord = new System.Windows.Forms.Button();
             this.panel24 = new System.Windows.Forms.Panel();
             this.cbAccountType = new System.Windows.Forms.ComboBox();
             this.lblAccountType = new System.Windows.Forms.Label();
@@ -108,37 +109,36 @@
             this.panel26 = new System.Windows.Forms.Panel();
             this.txtAccountName = new System.Windows.Forms.TextBox();
             this.lblAccountName = new System.Windows.Forms.Label();
-            this.btnResertPassWord = new System.Windows.Forms.Button();
             this.tbAdmin.SuspendLayout();
             this.tbBill.SuspendLayout();
-            this.tpDrink.SuspendLayout();
-            this.tpCategoryDrink.SuspendLayout();
-            this.tpTable.SuspendLayout();
-            this.tpAccount.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBill)).BeginInit();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tpDrink.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgkDrink)).BeginInit();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmDrinkPrice)).BeginInit();
+            this.panel11.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgkDrink)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.tpCategoryDrink.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvCategory)).BeginInit();
+            this.panel13.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panel19.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel20.SuspendLayout();
-            this.panel21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCategory)).BeginInit();
-            this.panel13.SuspendLayout();
+            this.tpTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel14.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.tpAccount.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
             this.panel22.SuspendLayout();
@@ -172,60 +172,22 @@
             this.tbBill.Text = "Doanh thu";
             this.tbBill.UseVisualStyleBackColor = true;
             // 
-            // tpDrink
+            // panel4
             // 
-            this.tpDrink.Controls.Add(this.panel8);
-            this.tpDrink.Controls.Add(this.panel7);
-            this.tpDrink.Controls.Add(this.panel6);
-            this.tpDrink.Controls.Add(this.panel5);
-            this.tpDrink.Location = new System.Drawing.Point(4, 29);
-            this.tpDrink.Name = "tpDrink";
-            this.tpDrink.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDrink.Size = new System.Drawing.Size(906, 595);
-            this.tpDrink.TabIndex = 1;
-            this.tpDrink.Text = "Đồ uống";
-            this.tpDrink.UseVisualStyleBackColor = true;
+            this.panel4.Controls.Add(this.dtgvBill);
+            this.panel4.Location = new System.Drawing.Point(6, 55);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(894, 534);
+            this.panel4.TabIndex = 1;
             // 
-            // tpCategoryDrink
+            // dtgvBill
             // 
-            this.tpCategoryDrink.Controls.Add(this.dtgvCategory);
-            this.tpCategoryDrink.Controls.Add(this.panel13);
-            this.tpCategoryDrink.Controls.Add(this.panel15);
-            this.tpCategoryDrink.Location = new System.Drawing.Point(4, 29);
-            this.tpCategoryDrink.Name = "tpCategoryDrink";
-            this.tpCategoryDrink.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCategoryDrink.Size = new System.Drawing.Size(906, 595);
-            this.tpCategoryDrink.TabIndex = 2;
-            this.tpCategoryDrink.Text = "Danh mục";
-            this.tpCategoryDrink.UseVisualStyleBackColor = true;
-            this.tpCategoryDrink.Click += new System.EventHandler(this.tpCategoryDrink_Click);
-            // 
-            // tpTable
-            // 
-            this.tpTable.Controls.Add(this.dataGridView1);
-            this.tpTable.Controls.Add(this.panel14);
-            this.tpTable.Controls.Add(this.panel16);
-            this.tpTable.Location = new System.Drawing.Point(4, 29);
-            this.tpTable.Name = "tpTable";
-            this.tpTable.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTable.Size = new System.Drawing.Size(906, 595);
-            this.tpTable.TabIndex = 3;
-            this.tpTable.Text = "Bàn ghế";
-            this.tpTable.UseVisualStyleBackColor = true;
-            // 
-            // tpAccount
-            // 
-            this.tpAccount.Controls.Add(this.panel1);
-            this.tpAccount.Controls.Add(this.dtgvAccount);
-            this.tpAccount.Controls.Add(this.panel22);
-            this.tpAccount.Location = new System.Drawing.Point(4, 29);
-            this.tpAccount.Name = "tpAccount";
-            this.tpAccount.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAccount.Size = new System.Drawing.Size(906, 595);
-            this.tpAccount.TabIndex = 4;
-            this.tpAccount.Text = "Tài khoản";
-            this.tpAccount.UseVisualStyleBackColor = true;
-            this.tpAccount.Click += new System.EventHandler(this.tpAccount_Click);
+            this.dtgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvBill.Location = new System.Drawing.Point(3, 0);
+            this.dtgvBill.Name = "dtgvBill";
+            this.dtgvBill.RowTemplate.Height = 28;
+            this.dtgvBill.Size = new System.Drawing.Size(888, 531);
+            this.dtgvBill.TabIndex = 0;
             // 
             // panel3
             // 
@@ -260,42 +222,44 @@
             this.dtpkFromDate.Size = new System.Drawing.Size(296, 26);
             this.dtpkFromDate.TabIndex = 3;
             // 
-            // panel4
+            // tpDrink
             // 
-            this.panel4.Controls.Add(this.dtgvBill);
-            this.panel4.Location = new System.Drawing.Point(6, 55);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(894, 534);
-            this.panel4.TabIndex = 1;
+            this.tpDrink.Controls.Add(this.panel8);
+            this.tpDrink.Controls.Add(this.panel7);
+            this.tpDrink.Controls.Add(this.panel6);
+            this.tpDrink.Controls.Add(this.panel5);
+            this.tpDrink.Location = new System.Drawing.Point(4, 29);
+            this.tpDrink.Name = "tpDrink";
+            this.tpDrink.Padding = new System.Windows.Forms.Padding(3);
+            this.tpDrink.Size = new System.Drawing.Size(906, 595);
+            this.tpDrink.TabIndex = 1;
+            this.tpDrink.Text = "Đồ uống";
+            this.tpDrink.UseVisualStyleBackColor = true;
             // 
-            // dtgvBill
+            // panel8
             // 
-            this.dtgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvBill.Location = new System.Drawing.Point(3, 0);
-            this.dtgvBill.Name = "dtgvBill";
-            this.dtgvBill.RowTemplate.Height = 28;
-            this.dtgvBill.Size = new System.Drawing.Size(888, 531);
-            this.dtgvBill.TabIndex = 0;
+            this.panel8.Controls.Add(this.txtSearchDrinkName);
+            this.panel8.Controls.Add(this.btnSearchDrink);
+            this.panel8.Location = new System.Drawing.Point(483, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(417, 74);
+            this.panel8.TabIndex = 3;
             // 
-            // panel5
+            // txtSearchDrinkName
             // 
-            this.panel5.Controls.Add(this.btnShowDrink);
-            this.panel5.Controls.Add(this.btnEditDrink);
-            this.panel5.Controls.Add(this.btnDeleteDrink);
-            this.panel5.Controls.Add(this.btnAddDrink);
-            this.panel5.Location = new System.Drawing.Point(3, 6);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(474, 74);
-            this.panel5.TabIndex = 0;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            this.txtSearchDrinkName.Location = new System.Drawing.Point(3, 19);
+            this.txtSearchDrinkName.Name = "txtSearchDrinkName";
+            this.txtSearchDrinkName.Size = new System.Drawing.Size(295, 26);
+            this.txtSearchDrinkName.TabIndex = 1;
             // 
-            // panel6
+            // btnSearchDrink
             // 
-            this.panel6.Controls.Add(this.dtgkDrink);
-            this.panel6.Location = new System.Drawing.Point(3, 83);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(474, 512);
-            this.panel6.TabIndex = 1;
+            this.btnSearchDrink.Location = new System.Drawing.Point(304, 0);
+            this.btnSearchDrink.Name = "btnSearchDrink";
+            this.btnSearchDrink.Size = new System.Drawing.Size(110, 64);
+            this.btnSearchDrink.TabIndex = 0;
+            this.btnSearchDrink.Text = "Tìm kiếm";
+            this.btnSearchDrink.UseVisualStyleBackColor = true;
             // 
             // panel7
             // 
@@ -308,102 +272,64 @@
             this.panel7.Size = new System.Drawing.Size(417, 512);
             this.panel7.TabIndex = 2;
             // 
-            // panel8
+            // panel12
             // 
-            this.panel8.Controls.Add(this.txtSearchDrinkName);
-            this.panel8.Controls.Add(this.btnSearchDrink);
-            this.panel8.Location = new System.Drawing.Point(483, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(417, 74);
-            this.panel8.TabIndex = 3;
+            this.panel12.Controls.Add(this.nmDrinkPrice);
+            this.panel12.Controls.Add(this.lblPrice);
+            this.panel12.Location = new System.Drawing.Point(0, 204);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(411, 48);
+            this.panel12.TabIndex = 5;
             // 
-            // dtgkDrink
+            // nmDrinkPrice
             // 
-            this.dtgkDrink.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgkDrink.Location = new System.Drawing.Point(0, 3);
-            this.dtgkDrink.Name = "dtgkDrink";
-            this.dtgkDrink.RowTemplate.Height = 28;
-            this.dtgkDrink.Size = new System.Drawing.Size(471, 509);
-            this.dtgkDrink.TabIndex = 0;
+            this.nmDrinkPrice.Location = new System.Drawing.Point(131, 3);
+            this.nmDrinkPrice.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nmDrinkPrice.Name = "nmDrinkPrice";
+            this.nmDrinkPrice.Size = new System.Drawing.Size(277, 26);
+            this.nmDrinkPrice.TabIndex = 6;
+            this.nmDrinkPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // btnAddDrink
+            // lblPrice
             // 
-            this.btnAddDrink.Location = new System.Drawing.Point(6, 7);
-            this.btnAddDrink.Name = "btnAddDrink";
-            this.btnAddDrink.Size = new System.Drawing.Size(110, 64);
-            this.btnAddDrink.TabIndex = 0;
-            this.btnAddDrink.Text = "Thêm";
-            this.btnAddDrink.UseVisualStyleBackColor = true;
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(6, 0);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(63, 26);
+            this.lblPrice.TabIndex = 0;
+            this.lblPrice.Text = "Giá: ";
             // 
-            // btnDeleteDrink
+            // panel11
             // 
-            this.btnDeleteDrink.Location = new System.Drawing.Point(122, 7);
-            this.btnDeleteDrink.Name = "btnDeleteDrink";
-            this.btnDeleteDrink.Size = new System.Drawing.Size(110, 64);
-            this.btnDeleteDrink.TabIndex = 0;
-            this.btnDeleteDrink.Text = "Xóa";
-            this.btnDeleteDrink.UseVisualStyleBackColor = true;
+            this.panel11.Controls.Add(this.cbDrinkCategory);
+            this.panel11.Controls.Add(this.lblDrinkCategory);
+            this.panel11.Location = new System.Drawing.Point(0, 140);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(411, 48);
+            this.panel11.TabIndex = 4;
             // 
-            // btnEditDrink
+            // cbDrinkCategory
             // 
-            this.btnEditDrink.Location = new System.Drawing.Point(238, 7);
-            this.btnEditDrink.Name = "btnEditDrink";
-            this.btnEditDrink.Size = new System.Drawing.Size(110, 64);
-            this.btnEditDrink.TabIndex = 0;
-            this.btnEditDrink.Text = "Sửa";
-            this.btnEditDrink.UseVisualStyleBackColor = true;
+            this.cbDrinkCategory.FormattingEnabled = true;
+            this.cbDrinkCategory.Location = new System.Drawing.Point(128, 3);
+            this.cbDrinkCategory.Name = "cbDrinkCategory";
+            this.cbDrinkCategory.Size = new System.Drawing.Size(280, 28);
+            this.cbDrinkCategory.TabIndex = 1;
             // 
-            // btnShowDrink
+            // lblDrinkCategory
             // 
-            this.btnShowDrink.Location = new System.Drawing.Point(354, 7);
-            this.btnShowDrink.Name = "btnShowDrink";
-            this.btnShowDrink.Size = new System.Drawing.Size(110, 64);
-            this.btnShowDrink.TabIndex = 0;
-            this.btnShowDrink.Text = "Xem";
-            this.btnShowDrink.UseVisualStyleBackColor = true;
-            // 
-            // btnSearchDrink
-            // 
-            this.btnSearchDrink.Location = new System.Drawing.Point(304, 0);
-            this.btnSearchDrink.Name = "btnSearchDrink";
-            this.btnSearchDrink.Size = new System.Drawing.Size(110, 64);
-            this.btnSearchDrink.TabIndex = 0;
-            this.btnSearchDrink.Text = "Tìm kiếm";
-            this.btnSearchDrink.UseVisualStyleBackColor = true;
-            // 
-            // txtSearchDrinkName
-            // 
-            this.txtSearchDrinkName.Location = new System.Drawing.Point(3, 19);
-            this.txtSearchDrinkName.Name = "txtSearchDrinkName";
-            this.txtSearchDrinkName.Size = new System.Drawing.Size(295, 26);
-            this.txtSearchDrinkName.TabIndex = 1;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.txtDrinkID);
-            this.panel9.Controls.Add(this.lblID_Drink);
-            this.panel9.Location = new System.Drawing.Point(3, 13);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(411, 48);
-            this.panel9.TabIndex = 2;
-            // 
-            // lblID_Drink
-            // 
-            this.lblID_Drink.AutoSize = true;
-            this.lblID_Drink.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID_Drink.Location = new System.Drawing.Point(3, 0);
-            this.lblID_Drink.Name = "lblID_Drink";
-            this.lblID_Drink.Size = new System.Drawing.Size(46, 26);
-            this.lblID_Drink.TabIndex = 0;
-            this.lblID_Drink.Text = "ID:";
-            // 
-            // txtDrinkID
-            // 
-            this.txtDrinkID.Location = new System.Drawing.Point(128, 0);
-            this.txtDrinkID.Name = "txtDrinkID";
-            this.txtDrinkID.ReadOnly = true;
-            this.txtDrinkID.Size = new System.Drawing.Size(280, 26);
-            this.txtDrinkID.TabIndex = 1;
+            this.lblDrinkCategory.AutoSize = true;
+            this.lblDrinkCategory.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDrinkCategory.Location = new System.Drawing.Point(3, 0);
+            this.lblDrinkCategory.Name = "lblDrinkCategory";
+            this.lblDrinkCategory.Size = new System.Drawing.Size(124, 26);
+            this.lblDrinkCategory.TabIndex = 0;
+            this.lblDrinkCategory.Text = "Danh mục:";
             // 
             // panel10
             // 
@@ -431,65 +357,165 @@
             this.lblAddDrink.TabIndex = 0;
             this.lblAddDrink.Text = "Tên món:";
             // 
-            // panel11
+            // panel9
             // 
-            this.panel11.Controls.Add(this.cbDrinkCategory);
-            this.panel11.Controls.Add(this.lblDrinkCategory);
-            this.panel11.Location = new System.Drawing.Point(0, 140);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(411, 48);
-            this.panel11.TabIndex = 4;
+            this.panel9.Controls.Add(this.txtDrinkID);
+            this.panel9.Controls.Add(this.lblID_Drink);
+            this.panel9.Location = new System.Drawing.Point(3, 13);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(411, 48);
+            this.panel9.TabIndex = 2;
             // 
-            // lblDrinkCategory
+            // txtDrinkID
             // 
-            this.lblDrinkCategory.AutoSize = true;
-            this.lblDrinkCategory.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDrinkCategory.Location = new System.Drawing.Point(3, 0);
-            this.lblDrinkCategory.Name = "lblDrinkCategory";
-            this.lblDrinkCategory.Size = new System.Drawing.Size(124, 26);
-            this.lblDrinkCategory.TabIndex = 0;
-            this.lblDrinkCategory.Text = "Danh mục:";
+            this.txtDrinkID.Location = new System.Drawing.Point(128, 0);
+            this.txtDrinkID.Name = "txtDrinkID";
+            this.txtDrinkID.ReadOnly = true;
+            this.txtDrinkID.Size = new System.Drawing.Size(280, 26);
+            this.txtDrinkID.TabIndex = 1;
             // 
-            // cbDrinkCategory
+            // lblID_Drink
             // 
-            this.cbDrinkCategory.FormattingEnabled = true;
-            this.cbDrinkCategory.Location = new System.Drawing.Point(128, 3);
-            this.cbDrinkCategory.Name = "cbDrinkCategory";
-            this.cbDrinkCategory.Size = new System.Drawing.Size(280, 28);
-            this.cbDrinkCategory.TabIndex = 1;
+            this.lblID_Drink.AutoSize = true;
+            this.lblID_Drink.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID_Drink.Location = new System.Drawing.Point(3, 0);
+            this.lblID_Drink.Name = "lblID_Drink";
+            this.lblID_Drink.Size = new System.Drawing.Size(46, 26);
+            this.lblID_Drink.TabIndex = 0;
+            this.lblID_Drink.Text = "ID:";
             // 
-            // panel12
+            // panel6
             // 
-            this.panel12.Controls.Add(this.nmDrinkPrice);
-            this.panel12.Controls.Add(this.lblPrice);
-            this.panel12.Location = new System.Drawing.Point(0, 204);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(411, 48);
-            this.panel12.TabIndex = 5;
+            this.panel6.Controls.Add(this.dtgkDrink);
+            this.panel6.Location = new System.Drawing.Point(3, 83);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(474, 512);
+            this.panel6.TabIndex = 1;
             // 
-            // lblPrice
+            // dtgkDrink
             // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(6, 0);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(63, 26);
-            this.lblPrice.TabIndex = 0;
-            this.lblPrice.Text = "Giá: ";
-            this.lblPrice.Click += new System.EventHandler(this.label1_Click);
+            this.dtgkDrink.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgkDrink.Location = new System.Drawing.Point(0, 3);
+            this.dtgkDrink.Name = "dtgkDrink";
+            this.dtgkDrink.RowTemplate.Height = 28;
+            this.dtgkDrink.Size = new System.Drawing.Size(471, 509);
+            this.dtgkDrink.TabIndex = 0;
             // 
-            // nmDrinkPrice
+            // panel5
             // 
-            this.nmDrinkPrice.Location = new System.Drawing.Point(131, 3);
-            this.nmDrinkPrice.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nmDrinkPrice.Name = "nmDrinkPrice";
-            this.nmDrinkPrice.Size = new System.Drawing.Size(277, 26);
-            this.nmDrinkPrice.TabIndex = 6;
-            this.nmDrinkPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.panel5.Controls.Add(this.btnShowDrink);
+            this.panel5.Controls.Add(this.btnEditDrink);
+            this.panel5.Controls.Add(this.btnDeleteDrink);
+            this.panel5.Controls.Add(this.btnAddDrink);
+            this.panel5.Location = new System.Drawing.Point(3, 6);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(474, 74);
+            this.panel5.TabIndex = 0;
+            // 
+            // btnShowDrink
+            // 
+            this.btnShowDrink.Location = new System.Drawing.Point(354, 7);
+            this.btnShowDrink.Name = "btnShowDrink";
+            this.btnShowDrink.Size = new System.Drawing.Size(110, 64);
+            this.btnShowDrink.TabIndex = 0;
+            this.btnShowDrink.Text = "Xem";
+            this.btnShowDrink.UseVisualStyleBackColor = true;
+            // 
+            // btnEditDrink
+            // 
+            this.btnEditDrink.Location = new System.Drawing.Point(238, 7);
+            this.btnEditDrink.Name = "btnEditDrink";
+            this.btnEditDrink.Size = new System.Drawing.Size(110, 64);
+            this.btnEditDrink.TabIndex = 0;
+            this.btnEditDrink.Text = "Sửa";
+            this.btnEditDrink.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteDrink
+            // 
+            this.btnDeleteDrink.Location = new System.Drawing.Point(122, 7);
+            this.btnDeleteDrink.Name = "btnDeleteDrink";
+            this.btnDeleteDrink.Size = new System.Drawing.Size(110, 64);
+            this.btnDeleteDrink.TabIndex = 0;
+            this.btnDeleteDrink.Text = "Xóa";
+            this.btnDeleteDrink.UseVisualStyleBackColor = true;
+            // 
+            // btnAddDrink
+            // 
+            this.btnAddDrink.Location = new System.Drawing.Point(6, 7);
+            this.btnAddDrink.Name = "btnAddDrink";
+            this.btnAddDrink.Size = new System.Drawing.Size(110, 64);
+            this.btnAddDrink.TabIndex = 0;
+            this.btnAddDrink.Text = "Thêm";
+            this.btnAddDrink.UseVisualStyleBackColor = true;
+            // 
+            // tpCategoryDrink
+            // 
+            this.tpCategoryDrink.Controls.Add(this.dtgvCategory);
+            this.tpCategoryDrink.Controls.Add(this.panel13);
+            this.tpCategoryDrink.Controls.Add(this.panel15);
+            this.tpCategoryDrink.Location = new System.Drawing.Point(4, 29);
+            this.tpCategoryDrink.Name = "tpCategoryDrink";
+            this.tpCategoryDrink.Padding = new System.Windows.Forms.Padding(3);
+            this.tpCategoryDrink.Size = new System.Drawing.Size(906, 595);
+            this.tpCategoryDrink.TabIndex = 2;
+            this.tpCategoryDrink.Text = "Danh mục";
+            this.tpCategoryDrink.UseVisualStyleBackColor = true;
+            // 
+            // dtgvCategory
+            // 
+            this.dtgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvCategory.Location = new System.Drawing.Point(6, 83);
+            this.dtgvCategory.Name = "dtgvCategory";
+            this.dtgvCategory.RowTemplate.Height = 28;
+            this.dtgvCategory.Size = new System.Drawing.Size(471, 511);
+            this.dtgvCategory.TabIndex = 10;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.btnShowCategory);
+            this.panel13.Controls.Add(this.btnEditCategory);
+            this.panel13.Controls.Add(this.btnDeleteCategory);
+            this.panel13.Controls.Add(this.btnAddCategory);
+            this.panel13.Location = new System.Drawing.Point(6, 6);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(474, 74);
+            this.panel13.TabIndex = 9;
+            // 
+            // btnShowCategory
+            // 
+            this.btnShowCategory.Location = new System.Drawing.Point(351, 7);
+            this.btnShowCategory.Name = "btnShowCategory";
+            this.btnShowCategory.Size = new System.Drawing.Size(110, 64);
+            this.btnShowCategory.TabIndex = 0;
+            this.btnShowCategory.Text = "Xem";
+            this.btnShowCategory.UseVisualStyleBackColor = true;
+            // 
+            // btnEditCategory
+            // 
+            this.btnEditCategory.Location = new System.Drawing.Point(235, 7);
+            this.btnEditCategory.Name = "btnEditCategory";
+            this.btnEditCategory.Size = new System.Drawing.Size(110, 64);
+            this.btnEditCategory.TabIndex = 0;
+            this.btnEditCategory.Text = "Sửa";
+            this.btnEditCategory.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteCategory
+            // 
+            this.btnDeleteCategory.Location = new System.Drawing.Point(119, 7);
+            this.btnDeleteCategory.Name = "btnDeleteCategory";
+            this.btnDeleteCategory.Size = new System.Drawing.Size(110, 64);
+            this.btnDeleteCategory.TabIndex = 0;
+            this.btnDeleteCategory.Text = "Xóa";
+            this.btnDeleteCategory.UseVisualStyleBackColor = true;
+            // 
+            // btnAddCategory
+            // 
+            this.btnAddCategory.Location = new System.Drawing.Point(3, 7);
+            this.btnAddCategory.Name = "btnAddCategory";
+            this.btnAddCategory.Size = new System.Drawing.Size(110, 64);
+            this.btnAddCategory.TabIndex = 0;
+            this.btnAddCategory.Text = "Thêm";
+            this.btnAddCategory.UseVisualStyleBackColor = true;
             // 
             // panel15
             // 
@@ -553,151 +579,18 @@
             this.lblCategoryID.TabIndex = 0;
             this.lblCategoryID.Text = "ID:";
             // 
-            // panel16
+            // tpTable
             // 
-            this.panel16.Controls.Add(this.panel21);
-            this.panel16.Controls.Add(this.panel17);
-            this.panel16.Controls.Add(this.panel20);
-            this.panel16.Location = new System.Drawing.Point(485, 81);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(417, 512);
-            this.panel16.TabIndex = 10;
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.textBox1);
-            this.panel17.Controls.Add(this.lblTableName);
-            this.panel17.Location = new System.Drawing.Point(3, 76);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(411, 48);
-            this.panel17.TabIndex = 3;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(163, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 26);
-            this.textBox1.TabIndex = 1;
-            // 
-            // lblTableName
-            // 
-            this.lblTableName.AutoSize = true;
-            this.lblTableName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTableName.Location = new System.Drawing.Point(3, 0);
-            this.lblTableName.Name = "lblTableName";
-            this.lblTableName.Size = new System.Drawing.Size(103, 26);
-            this.lblTableName.TabIndex = 0;
-            this.lblTableName.Text = "Tên bàn:";
-            // 
-            // panel20
-            // 
-            this.panel20.Controls.Add(this.textBox3);
-            this.panel20.Controls.Add(this.label2);
-            this.panel20.Location = new System.Drawing.Point(3, 13);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(411, 48);
-            this.panel20.TabIndex = 2;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(163, 0);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(245, 26);
-            this.textBox3.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 26);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "ID:";
-            // 
-            // panel21
-            // 
-            this.panel21.Controls.Add(this.cbStatusTable);
-            this.panel21.Controls.Add(this.lblStatusTable);
-            this.panel21.Location = new System.Drawing.Point(0, 130);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(411, 48);
-            this.panel21.TabIndex = 3;
-            // 
-            // lblStatusTable
-            // 
-            this.lblStatusTable.AutoSize = true;
-            this.lblStatusTable.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatusTable.Location = new System.Drawing.Point(3, 0);
-            this.lblStatusTable.Name = "lblStatusTable";
-            this.lblStatusTable.Size = new System.Drawing.Size(127, 26);
-            this.lblStatusTable.TabIndex = 0;
-            this.lblStatusTable.Text = "Trạng thái:";
-            // 
-            // cbStatusTable
-            // 
-            this.cbStatusTable.FormattingEnabled = true;
-            this.cbStatusTable.Location = new System.Drawing.Point(166, 3);
-            this.cbStatusTable.Name = "cbStatusTable";
-            this.cbStatusTable.Size = new System.Drawing.Size(245, 28);
-            this.cbStatusTable.TabIndex = 1;
-            // 
-            // dtgvCategory
-            // 
-            this.dtgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvCategory.Location = new System.Drawing.Point(6, 83);
-            this.dtgvCategory.Name = "dtgvCategory";
-            this.dtgvCategory.RowTemplate.Height = 28;
-            this.dtgvCategory.Size = new System.Drawing.Size(471, 511);
-            this.dtgvCategory.TabIndex = 10;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.btnShowCategory);
-            this.panel13.Controls.Add(this.btnEditCategory);
-            this.panel13.Controls.Add(this.btnDeleteCategory);
-            this.panel13.Controls.Add(this.btnAddCategory);
-            this.panel13.Location = new System.Drawing.Point(6, 6);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(474, 74);
-            this.panel13.TabIndex = 9;
-            // 
-            // btnShowCategory
-            // 
-            this.btnShowCategory.Location = new System.Drawing.Point(351, 7);
-            this.btnShowCategory.Name = "btnShowCategory";
-            this.btnShowCategory.Size = new System.Drawing.Size(110, 64);
-            this.btnShowCategory.TabIndex = 0;
-            this.btnShowCategory.Text = "Xem";
-            this.btnShowCategory.UseVisualStyleBackColor = true;
-            // 
-            // btnEditCategory
-            // 
-            this.btnEditCategory.Location = new System.Drawing.Point(235, 7);
-            this.btnEditCategory.Name = "btnEditCategory";
-            this.btnEditCategory.Size = new System.Drawing.Size(110, 64);
-            this.btnEditCategory.TabIndex = 0;
-            this.btnEditCategory.Text = "Sửa";
-            this.btnEditCategory.UseVisualStyleBackColor = true;
-            // 
-            // btnDeleteCategory
-            // 
-            this.btnDeleteCategory.Location = new System.Drawing.Point(119, 7);
-            this.btnDeleteCategory.Name = "btnDeleteCategory";
-            this.btnDeleteCategory.Size = new System.Drawing.Size(110, 64);
-            this.btnDeleteCategory.TabIndex = 0;
-            this.btnDeleteCategory.Text = "Xóa";
-            this.btnDeleteCategory.UseVisualStyleBackColor = true;
-            // 
-            // btnAddCategory
-            // 
-            this.btnAddCategory.Location = new System.Drawing.Point(3, 7);
-            this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(110, 64);
-            this.btnAddCategory.TabIndex = 0;
-            this.btnAddCategory.Text = "Thêm";
-            this.btnAddCategory.UseVisualStyleBackColor = true;
+            this.tpTable.Controls.Add(this.dataGridView1);
+            this.tpTable.Controls.Add(this.panel14);
+            this.tpTable.Controls.Add(this.panel16);
+            this.tpTable.Location = new System.Drawing.Point(4, 29);
+            this.tpTable.Name = "tpTable";
+            this.tpTable.Padding = new System.Windows.Forms.Padding(3);
+            this.tpTable.Size = new System.Drawing.Size(906, 595);
+            this.tpTable.TabIndex = 3;
+            this.tpTable.Text = "Bàn ghế";
+            this.tpTable.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -754,6 +647,109 @@
             this.btnAddTable.TabIndex = 0;
             this.btnAddTable.Text = "Thêm";
             this.btnAddTable.UseVisualStyleBackColor = true;
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.panel21);
+            this.panel16.Controls.Add(this.panel17);
+            this.panel16.Controls.Add(this.panel20);
+            this.panel16.Location = new System.Drawing.Point(485, 81);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(417, 512);
+            this.panel16.TabIndex = 10;
+            // 
+            // panel21
+            // 
+            this.panel21.Controls.Add(this.cbStatusTable);
+            this.panel21.Controls.Add(this.lblStatusTable);
+            this.panel21.Location = new System.Drawing.Point(0, 130);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(411, 48);
+            this.panel21.TabIndex = 3;
+            // 
+            // cbStatusTable
+            // 
+            this.cbStatusTable.FormattingEnabled = true;
+            this.cbStatusTable.Location = new System.Drawing.Point(166, 3);
+            this.cbStatusTable.Name = "cbStatusTable";
+            this.cbStatusTable.Size = new System.Drawing.Size(245, 28);
+            this.cbStatusTable.TabIndex = 1;
+            // 
+            // lblStatusTable
+            // 
+            this.lblStatusTable.AutoSize = true;
+            this.lblStatusTable.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatusTable.Location = new System.Drawing.Point(3, 0);
+            this.lblStatusTable.Name = "lblStatusTable";
+            this.lblStatusTable.Size = new System.Drawing.Size(127, 26);
+            this.lblStatusTable.TabIndex = 0;
+            this.lblStatusTable.Text = "Trạng thái:";
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.textBox1);
+            this.panel17.Controls.Add(this.lblTableName);
+            this.panel17.Location = new System.Drawing.Point(3, 76);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(411, 48);
+            this.panel17.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(163, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(245, 26);
+            this.textBox1.TabIndex = 1;
+            // 
+            // lblTableName
+            // 
+            this.lblTableName.AutoSize = true;
+            this.lblTableName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableName.Location = new System.Drawing.Point(3, 0);
+            this.lblTableName.Name = "lblTableName";
+            this.lblTableName.Size = new System.Drawing.Size(103, 26);
+            this.lblTableName.TabIndex = 0;
+            this.lblTableName.Text = "Tên bàn:";
+            // 
+            // panel20
+            // 
+            this.panel20.Controls.Add(this.textBox3);
+            this.panel20.Controls.Add(this.label2);
+            this.panel20.Location = new System.Drawing.Point(3, 13);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(411, 48);
+            this.panel20.TabIndex = 2;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(163, 0);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(245, 26);
+            this.textBox3.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 26);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "ID:";
+            // 
+            // tpAccount
+            // 
+            this.tpAccount.Controls.Add(this.panel1);
+            this.tpAccount.Controls.Add(this.dtgvAccount);
+            this.tpAccount.Controls.Add(this.panel22);
+            this.tpAccount.Location = new System.Drawing.Point(4, 29);
+            this.tpAccount.Name = "tpAccount";
+            this.tpAccount.Padding = new System.Windows.Forms.Padding(3);
+            this.tpAccount.Size = new System.Drawing.Size(906, 595);
+            this.tpAccount.TabIndex = 4;
+            this.tpAccount.Text = "Tài khoản";
+            this.tpAccount.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -821,6 +817,17 @@
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(417, 512);
             this.panel22.TabIndex = 6;
+            // 
+            // btnResertPassWord
+            // 
+            this.btnResertPassWord.BackColor = System.Drawing.Color.Transparent;
+            this.btnResertPassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResertPassWord.Location = new System.Drawing.Point(296, 194);
+            this.btnResertPassWord.Name = "btnResertPassWord";
+            this.btnResertPassWord.Size = new System.Drawing.Size(118, 66);
+            this.btnResertPassWord.TabIndex = 5;
+            this.btnResertPassWord.Text = "Đặt lại mật khẩu:";
+            this.btnResertPassWord.UseVisualStyleBackColor = false;
             // 
             // panel24
             // 
@@ -902,17 +909,6 @@
             this.lblAccountName.TabIndex = 0;
             this.lblAccountName.Text = "Tên tài khoản:";
             // 
-            // btnResertPassWord
-            // 
-            this.btnResertPassWord.BackColor = System.Drawing.Color.Transparent;
-            this.btnResertPassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResertPassWord.Location = new System.Drawing.Point(296, 194);
-            this.btnResertPassWord.Name = "btnResertPassWord";
-            this.btnResertPassWord.Size = new System.Drawing.Size(118, 66);
-            this.btnResertPassWord.TabIndex = 5;
-            this.btnResertPassWord.Text = "Đặt lại mật khẩu:";
-            this.btnResertPassWord.UseVisualStyleBackColor = false;
-            // 
             // fAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -924,44 +920,44 @@
             this.Text = "Admin";
             this.tbAdmin.ResumeLayout(false);
             this.tbBill.ResumeLayout(false);
-            this.tpDrink.ResumeLayout(false);
-            this.tpCategoryDrink.ResumeLayout(false);
-            this.tpTable.ResumeLayout(false);
-            this.tpAccount.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBill)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.tpDrink.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgkDrink)).EndInit();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
+            this.panel7.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmDrinkPrice)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgkDrink)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.tpCategoryDrink.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvCategory)).EndInit();
+            this.panel13.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
+            this.tpTable.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel14.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
-            this.panel21.ResumeLayout(false);
-            this.panel21.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCategory)).EndInit();
-            this.panel13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel14.ResumeLayout(false);
+            this.tpAccount.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
             this.panel22.ResumeLayout(false);

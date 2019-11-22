@@ -40,10 +40,10 @@ namespace Coffee_Managerment
         }
         void LoadAccountList()
         {
-            string connectionSTR = @"Data Source=DESKTOP-IKCEBER\PHUONGANH;Initial Catalog=COFFEE_MANAGERMENT;User ID=sa";
+            string connectionSTR = @"Data Source=DESKTOP-IKCEBER\PHUONGANH;Initial Catalog=COFFEE_MANAGERMENT;User ID=sa; Password=110220";
             SqlConnection connection = new SqlConnection(connectionSTR);
 
-            string query = "select * from ACCOUNT";
+            string query = "SELECT * FROM ACCOUNT";
 
             connection.Open();
 
