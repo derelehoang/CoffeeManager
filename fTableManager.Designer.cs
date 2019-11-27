@@ -34,25 +34,25 @@
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.lsvBill = new System.Windows.Forms.ListView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.cbCategory = new System.Windows.Forms.ComboBox();
-            this.cbDrink = new System.Windows.Forms.ComboBox();
-            this.btnAddDrink = new System.Windows.Forms.Button();
-            this.nmDrink = new System.Windows.Forms.NumericUpDown();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnThanhToan = new System.Windows.Forms.Button();
-            this.btnGiamGia = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.nmCount = new System.Windows.Forms.NumericUpDown();
             this.btnSwichTable = new System.Windows.Forms.Button();
             this.cbSwichTable = new System.Windows.Forms.ComboBox();
+            this.btnGiamGia = new System.Windows.Forms.Button();
+            this.btnThanhToan = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.nmDrink = new System.Windows.Forms.NumericUpDown();
+            this.btnAddDrink = new System.Windows.Forms.Button();
+            this.cbDrink = new System.Windows.Forms.ComboBox();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmCount)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmDrink)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmCount)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -105,6 +105,16 @@
             this.panel2.Size = new System.Drawing.Size(454, 409);
             this.panel2.TabIndex = 2;
             // 
+            // lsvBill
+            // 
+            this.lsvBill.GridLines = true;
+            this.lsvBill.Location = new System.Drawing.Point(0, 3);
+            this.lsvBill.Name = "lsvBill";
+            this.lsvBill.Size = new System.Drawing.Size(454, 403);
+            this.lsvBill.TabIndex = 0;
+            this.lsvBill.UseCompatibleStateImageBehavior = false;
+            this.lsvBill.View = System.Windows.Forms.View.List;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.nmCount);
@@ -116,92 +126,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(454, 70);
             this.panel3.TabIndex = 3;
-            // 
-            // lsvBill
-            // 
-            this.lsvBill.Location = new System.Drawing.Point(0, 3);
-            this.lsvBill.Name = "lsvBill";
-            this.lsvBill.Size = new System.Drawing.Size(454, 403);
-            this.lsvBill.TabIndex = 0;
-            this.lsvBill.UseCompatibleStateImageBehavior = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.nmDrink);
-            this.panel4.Controls.Add(this.btnAddDrink);
-            this.panel4.Controls.Add(this.cbDrink);
-            this.panel4.Controls.Add(this.cbCategory);
-            this.panel4.Location = new System.Drawing.Point(608, 36);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(454, 76);
-            this.panel4.TabIndex = 4;
-            // 
-            // cbCategory
-            // 
-            this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(3, 0);
-            this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(245, 28);
-            this.cbCategory.TabIndex = 0;
-            // 
-            // cbDrink
-            // 
-            this.cbDrink.FormattingEnabled = true;
-            this.cbDrink.Location = new System.Drawing.Point(3, 34);
-            this.cbDrink.Name = "cbDrink";
-            this.cbDrink.Size = new System.Drawing.Size(245, 28);
-            this.cbDrink.TabIndex = 0;
-            // 
-            // btnAddDrink
-            // 
-            this.btnAddDrink.Location = new System.Drawing.Point(254, 3);
-            this.btnAddDrink.Name = "btnAddDrink";
-            this.btnAddDrink.Size = new System.Drawing.Size(95, 59);
-            this.btnAddDrink.TabIndex = 1;
-            this.btnAddDrink.Text = "Add";
-            this.btnAddDrink.UseVisualStyleBackColor = true;
-            // 
-            // nmDrink
-            // 
-            this.nmDrink.Location = new System.Drawing.Point(378, 20);
-            this.nmDrink.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.nmDrink.Name = "nmDrink";
-            this.nmDrink.Size = new System.Drawing.Size(76, 26);
-            this.nmDrink.TabIndex = 2;
-            this.nmDrink.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 36);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(590, 564);
-            this.flowLayoutPanel1.TabIndex = 5;
-            // 
-            // btnThanhToan
-            // 
-            this.btnThanhToan.Location = new System.Drawing.Point(356, 3);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(95, 59);
-            this.btnThanhToan.TabIndex = 1;
-            this.btnThanhToan.Text = "Thanh Toán";
-            this.btnThanhToan.UseVisualStyleBackColor = true;
-            // 
-            // btnGiamGia
-            // 
-            this.btnGiamGia.Location = new System.Drawing.Point(184, 3);
-            this.btnGiamGia.Name = "btnGiamGia";
-            this.btnGiamGia.Size = new System.Drawing.Size(109, 32);
-            this.btnGiamGia.TabIndex = 1;
-            this.btnGiamGia.Text = "Giảm giá";
-            this.btnGiamGia.UseVisualStyleBackColor = true;
             // 
             // nmCount
             // 
@@ -228,12 +152,91 @@
             this.cbSwichTable.Size = new System.Drawing.Size(109, 28);
             this.cbSwichTable.TabIndex = 0;
             // 
+            // btnGiamGia
+            // 
+            this.btnGiamGia.Location = new System.Drawing.Point(184, 3);
+            this.btnGiamGia.Name = "btnGiamGia";
+            this.btnGiamGia.Size = new System.Drawing.Size(109, 32);
+            this.btnGiamGia.TabIndex = 1;
+            this.btnGiamGia.Text = "Giảm giá";
+            this.btnGiamGia.UseVisualStyleBackColor = true;
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.Location = new System.Drawing.Point(356, 3);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(95, 59);
+            this.btnThanhToan.TabIndex = 1;
+            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.nmDrink);
+            this.panel4.Controls.Add(this.btnAddDrink);
+            this.panel4.Controls.Add(this.cbDrink);
+            this.panel4.Controls.Add(this.cbCategory);
+            this.panel4.Location = new System.Drawing.Point(608, 36);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(454, 76);
+            this.panel4.TabIndex = 4;
+            // 
+            // nmDrink
+            // 
+            this.nmDrink.Location = new System.Drawing.Point(378, 20);
+            this.nmDrink.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.nmDrink.Name = "nmDrink";
+            this.nmDrink.Size = new System.Drawing.Size(76, 26);
+            this.nmDrink.TabIndex = 2;
+            this.nmDrink.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // btnAddDrink
+            // 
+            this.btnAddDrink.Location = new System.Drawing.Point(254, 3);
+            this.btnAddDrink.Name = "btnAddDrink";
+            this.btnAddDrink.Size = new System.Drawing.Size(95, 59);
+            this.btnAddDrink.TabIndex = 1;
+            this.btnAddDrink.Text = "Add";
+            this.btnAddDrink.UseVisualStyleBackColor = true;
+            // 
+            // cbDrink
+            // 
+            this.cbDrink.FormattingEnabled = true;
+            this.cbDrink.Location = new System.Drawing.Point(3, 34);
+            this.cbDrink.Name = "cbDrink";
+            this.cbDrink.Size = new System.Drawing.Size(245, 28);
+            this.cbDrink.TabIndex = 0;
+            // 
+            // cbCategory
+            // 
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(3, 0);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(245, 28);
+            this.cbCategory.TabIndex = 0;
+            // 
+            // flpTable
+            // 
+            this.flpTable.AutoScroll = true;
+            this.flpTable.Location = new System.Drawing.Point(12, 36);
+            this.flpTable.Name = "flpTable";
+            this.flpTable.Size = new System.Drawing.Size(590, 564);
+            this.flpTable.TabIndex = 5;
+            // 
             // fTableManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 612);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flpTable);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -242,14 +245,13 @@
             this.Name = "fTableManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "phần mềm quản lý coffee";
-            this.Load += new System.EventHandler(this.fTableManager_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nmCount)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nmDrink)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,6 +277,6 @@
         private System.Windows.Forms.Button btnAddDrink;
         private System.Windows.Forms.ComboBox cbDrink;
         private System.Windows.Forms.ComboBox cbCategory;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpTable;
     }
 }

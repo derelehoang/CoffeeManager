@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Coffee_Managerment.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,18 +38,26 @@ namespace Coffee_Managerment
             if (MessageBox.Show("Bạn có thực sự muốn thoát chương trình?","Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
                 e.Cancel = true;
         }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
-        }
+            string userName = txtUserName.Text;
+            string passWord = txtPassWord.Text;
+            if (Login(userName, passWord))
+            {
 
-        private void btnLogin_Click_1(object sender, EventArgs e)
+                fTableManager f = new fTableManager();
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
+            }
+        }
+            bool Login(string userName, string passWord)
         {
-            fTableManager f = new fTableManager();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            return AccountDAO.Instance.Login(userName, passWord);
+        }
         }
     }
-}
