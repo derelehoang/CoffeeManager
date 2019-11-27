@@ -20,10 +20,7 @@ namespace Coffee_Managerment
             
         }
 
-<<<<<<< HEAD
-        
-        
-=======
+
         private void tpCategoryDrink_Click(object sender, EventArgs e)
         {
 
@@ -48,6 +45,5 @@ namespace Coffee_Managerment
 
             dtgvAccount.DataSource = data;
         }
->>>>>>> 161e3e066a3efc068e5e557925278d6b29e6b19e
     }
 }

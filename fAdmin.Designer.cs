@@ -156,6 +156,7 @@
             this.tbAdmin.Controls.Add(this.tpAccount);
             this.tbAdmin.Location = new System.Drawing.Point(12, 12);
             this.tbAdmin.Name = "tbAdmin";
+            this.tbAdmin.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbAdmin.SelectedIndex = 0;
             this.tbAdmin.Size = new System.Drawing.Size(914, 628);
             this.tbAdmin.TabIndex = 0;

@@ -20,8 +20,8 @@ namespace Coffee_Managerment.DAO
 
         public bool Login(string userName, string passWord)
         {
-            string query = "SELECT * FROM ACCOUNT WHERE USERNAME ='" + userName +"'AND PASS ='" + passWord + "'";
-            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            string query = "USP_Login @userName , @passWord";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[]{userName, passWord});
 
             return result.Rows.Count > 0;
         }
