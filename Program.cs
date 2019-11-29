@@ -17,6 +17,8 @@ namespace Coffee_Managerment
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new fLogin());
+
+            Console.WriteLine("mao mao");
         }
     }
 }
