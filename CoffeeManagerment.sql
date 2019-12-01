@@ -49,6 +49,7 @@ CREATE TABLE BILL
 	FOREIGN KEY (ID_TABLE) REFERENCES DBO.TABLE_DRINK(ID)
 )
 GO
+
 -----
 CREATE TABLE BILL_INFO
 (
@@ -59,6 +60,8 @@ CREATE TABLE BILL_INFO
 
 	FOREIGN KEY (ID_BILL) REFERENCES DBO.BILL(ID),
 	FOREIGN KEY (ID_DRINK) REFERENCES DBO.DRINK(ID)
+
+	
 )
 GO
 
@@ -143,13 +146,22 @@ GETDATE(),
 1788947,
 1)
 
---select * from BILL where ID_TABLE = 1788945 and STATUS = 0
-select * from BILL_INFO where ID_BILL = 5
+--drop table BILL
 
+--select * from BILL where ID_TABLE = 1788945 and STATUS = 0
+--select * from BILL_INFO where ID_BILL = 5
+
+----cau truy van----
+SELECT D.NAME, BI.COUNT, D.PRICE, D.PRICE*BI.COUNT TotalPrice
+FROM DRINK D, BILL B, BILL_INFO BI
+WHERE  BI.ID_BILL = B.ID AND BI.ID_DRINK = D.ID  AND ID_TABLE = 1788945
+
+---------------------
 select * from BILL
 select * from BILL_INFO
 select * from DRINK
 select * from DRINK_CATEGORY
 select * from TABLE_DRINK
+-------------------------------------
 
 
