@@ -1,0 +1,97 @@
+From 1a1023372c920354acea1dbe57180c559c425bfc Mon Sep 17 00:00:00 2001
+From: derelehoang <otaku.bokunohana@gmail.com>
+Date: Fri, 29 Nov 2019 20:20:10 +0700
+Subject: [PATCH] console
+
+---
+ Coffee_Managerment.v12.suo | Bin 55808 -> 60416 bytes
+ Program.cs                 |   2 ++
+ 2 files changed, 2 insertions(+)
+
+diff --git a/Coffee_Managerment.v12.suo b/Coffee_Managerment.v12.suo
+index 444f0febdeeb7e2b085b694d0bdca8c1817aad1c..da8e226655df20372069fbe468abe8d33d862814 100644
+GIT binary patch
+delta 3283
+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
+U!-_ZS-E`x$hmIFJ{|}7+14#aGc>n+a
+
+delta 1882
+zcmb7FT}+c_6#m{)N?Q>~DbPQmKsP#Qn}Ve@+L=ll#!!(Bhl@i;DJ?=u%K#S_Yix~7
+zbcCOt@iQ_N8?N?~V82}qvYBpU1Mh$__hXje&9ZobyKon~*t+w6Eli0d?tFRro^!r)
+z&UfDD{b}&0l;CG6BgQ>ECMj7AlZ`61|B1)r)SCh!;m5aHgd{BR^44DipWt0G&i*Ob
+zMTh_hKhM1fgD{p88R{8`-ASJaM^#dnCP!L06?Hl`<Cuq#BP0j~LW!tH>_UhUt%y3>
+z1pg3fpc4g20h*0bfkglou^Oa&8QU!$A<+!Gn6+npNummMI;bV<@cEnr7P74no3nwD
+z$ESKkD~_t|1is;wLto)w#3T$W><LS8R78aMiRbBOUMbVEj}+-7a)1}r1WC@llamj=
+zJ5VxnzDT3$n_20)o-GdY;Km1e@L;VL2G`Of)x5CPArxRT?VJ{XK6QhT@`AJ`9FNeU
+zMnjWyq|T$#0q+!Ej@CJduo$hh<SQb9Gy5;3(o`Y*RbmH+HcLu5%t7QLD1Q{tQm=x5
+zR;Z!|tw4)EhoJK)L1+;$tsMm2(Y1(#JdKsGE=I)cSGq<bTEf(qsvGTl;ijt+*7O?i
+z8Zrb+cYlqay~YL&8-zW3ET6z9#wnO?va+Sev7*kbf|~MqxP4p)Bj#6G!3jx$(#4!+
+zsu?fShM#|tNx@%++0U5p_Z-CM-eMQ#-zJ2C`+9j=Iywn9sr;e<J%=vJ!4|NAEodVq
+z2nEYC8KyH4L8BNQ%(^tY4NNZ<_x<NdOM0L+)Rbvt^o%k2=&|yJkP<!$iD5Rx&oN>R
+zlxD`o_!$pAZhWE__wiu%k`>uaHpy(@PNwvWm{AB_b;752L||Uf!sOR4!@~i2vB&Fg
+z@9-I1y@9|vr`c6yGC3`Jqub=vn>;SF-eNI3q4G*Mmshi>C*!nA)iY%2jb>AYWv{W)
+zWUexu57hX3x^B?iOpnv$@}Kebb@%u^9bPxwzg#BZUQcojt`A$t)J}oq+Gb25C5+|^
+zY_Q)(V0pj--hL^(c{LyIUCAI%OqVZa9Gt`YzdILs4ksBZf|Vh;AW;AshUHRv$P;3S
+zRiHvI4j5iA!tYBmm>#N2l4c`iG!rc)JyZ#Ca6~>6{Vj_*lFc5}Z#dk&9qqo8TuDA{
+z25#NSd#vt`Bo}ccD?JAj^f&bQYmk0i`K_8JC?Aq%ZVP~$iv>@T2}iya6OIgSf{nwu
+zx%9Lqq$FlYYL3nItm9_CKAZ(KbTg2S^l(!W9Xl?#RI;rd?6>TxZQ_FD(j%A<LyX?S
+z^hS1UZ5cI3fZTJ;+3Iy4ar&I??w-e|U$NEa%%Y0Wt>xr))Wi2mxi{W^F`WTPfkIw(
+zDLqv5FNPlGzkiNj>T>(~uo~{_&OqC~W>;}DeM1GD{ROx!<>ArS@d6iQZO_DV3U*-h
+z7al|)U&O}@df_>MOyohsYAxJemcbt@wcuUxLjFoU+AVN;xe0j79=JOugTO>hc%lui
+zkGFzpyc1og5JfOGW(D(DHSotOVE+AjDAhDUY*hsxYBbRNy#Y2f64+R+1H%ue;J3BI
+Vc>SMX>#L&#WItM2>*T`0e*pxOX7B(2
+
+diff --git a/Program.cs b/Program.cs
+index 83f7ccc..9c2e23c 100644
+--- a/Program.cs
++++ b/Program.cs
+@@ -17,6 +17,8 @@ namespace Coffee_Managerment
+             Application.EnableVisualStyles();
+             Application.SetCompatibleTextRenderingDefault(false);
+             Application.Run(new fLogin());
++
++            Console.WriteLine("mao mao");
+         }
+     }
+ }
+-- 
+2.23.0.windows.1
+

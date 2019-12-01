@@ -53,7 +53,19 @@ namespace Coffee_Managerment
         }
         void ShowBill(int id)
         {
-            List<BillInfo> listBillInfo = BilllInfoDAO.Instance.GetListBillIfo(BillDAO.Instance.GetUnCheckBillIDByTableID(id));
+            lsvBill.Items.Clear();
+            List<Coffee_Managerment.DTO.Menu> listBillInfo = MenuDAO.Instance.GetListMenuByTable(id);
+
+            foreach (Coffee_Managerment.DTO.Menu item in listBillInfo)
+            {
+                ListViewItem lsvItem = new ListViewItem(item.DrinkName.ToString());
+                lsvItem.SubItems.Add(item.Count.ToString());
+                lsvItem.SubItems.Add(item.Price.ToString());
+                lsvItem.SubItems.Add(item.TotalPrice.ToString());
+
+                lsvBill.Items.Add(lsvItem);
+
+            }
         }
         
         #endregion

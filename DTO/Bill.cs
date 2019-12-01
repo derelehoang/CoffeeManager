@@ -19,24 +19,15 @@ namespace Coffee_Managerment.DTO
         public Bill(DataRow row)
         {
             this.ID = (int)row["id"];
-            try
-            {
+            
                 this.DateCheckin = (DateTime?)row["date_Checkin"];
-            }
-            catch (ArgumentException e) {
-               Console.WriteLine("{0}: {1}", e.GetType().Name, e.Message);
-            }
+            
             var dateCheckOutTemp = row["date_CheckOut"];
             System.Diagnostics.Debug.WriteLine(dateCheckOutTemp);
             if(dateCheckOutTemp.ToString() != "")
-                try
-                {
+                
                     this.DateCheckOut = (DateTime?)row["date_CheckOut"];
-                }
-                catch (ArgumentException e)
-                {
-                    Console.WriteLine("{0}: {1}", e.GetType().Name, e.Message);
-                }
+               
             this.Status = (int)row["status"];
         }
 
