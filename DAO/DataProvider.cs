@@ -19,8 +19,8 @@ namespace Coffee_Managerment.DAO
         }
 
         private DataProvider() { }
-       private string connectionSTR = @"Data Source=DESKTOP-IKCEBER\PHUONGANH;Initial Catalog=COFFEE_MANAGERMENT;
-                                        User ID=sa; Password=110220";
+        private string connectionSTR = @"Data Source=HUYHOANG-PC\HUYHOANG;Initial Catalog=COFFEE_MANAGERMENT;
+                                        User ID=sa; Password=12112000";
        public object ExecuteScalar(string query, object[] Parameter = null)
        {
            object data = 0;

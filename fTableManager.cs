@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace Coffee_Managerment
 {
@@ -20,6 +21,14 @@ namespace Coffee_Managerment
             LoadTable();
         }
         #region method
+        void LoadCategory()
+        {
+
+        }
+        void LoadDrinkList()
+        {
+
+        }
         void LoadTable()
         {
             List<Table> tableList = TableDAO.Instance.LoadTableList();
@@ -55,17 +64,19 @@ namespace Coffee_Managerment
         {
             lsvBill.Items.Clear();
             List<Coffee_Managerment.DTO.Menu> listBillInfo = MenuDAO.Instance.GetListMenuByTable(id);
-
+            float totalPrice = 0;
             foreach (Coffee_Managerment.DTO.Menu item in listBillInfo)
             {
                 ListViewItem lsvItem = new ListViewItem(item.DrinkName.ToString());
                 lsvItem.SubItems.Add(item.Count.ToString());
                 lsvItem.SubItems.Add(item.Price.ToString());
                 lsvItem.SubItems.Add(item.TotalPrice.ToString());
-
+                totalPrice += item.TotalPrice;
                 lsvBill.Items.Add(lsvItem);
 
             }
+            CultureInfo culture = new CultureInfo("vi-VN");
+            txbTotalPrice.Text = totalPrice.ToString("c",culture);
         }
         
         #endregion

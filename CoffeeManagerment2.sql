@@ -162,6 +162,25 @@ select * from BILL_INFO
 select * from DRINK
 select * from DRINK_CATEGORY
 select * from TABLE_DRINK
--------------------------------------
+-------thêm category
+insert DRINK_CATEGORY
+	(NAME)
+value (n'Cà Phê')
+insert DRINK
+	(NAME)
+value (n'Sinh Tố')
+insert DRINK
+	(NAME)
+value (n'Yaoutr')
+insert DRINK
+	(NAME)
+value (n'Nước ngọt-Nước giải khác')
+-----thêm bill
+
+select * from BILL 
+go
+select * from BILL_INFO
+select * from DRINK
+select * from DRINK_CATEGORY
 
 
