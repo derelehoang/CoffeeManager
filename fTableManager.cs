@@ -26,11 +26,13 @@ namespace Coffee_Managerment
         {
             List<Category> listCategory = CategoryDAO.Instance.GetListCategory();
             cbCategory.DataSource = listCategory;
+            cbCategory.DisplayMember = "Name";
         }
         void LoadDrinkListByCategoryID(int id)
         {
             List<Drink> listDrink = DrinkDAO.Instance.GetDrinkByCategoryID(id);
             cbDrink.DataSource = listDrink;
+            cbDrink.DisplayMember = "Name";
         }
         void LoadTable()
         {
