@@ -139,11 +139,11 @@ GETDATE(),
 0),
 (GETDATE(),
 GETDATE(),
-1788946,
+1788949,
 0),
 (GETDATE(),
 GETDATE(),
-1788947,
+1788953,
 1)
 
 --drop table BILL
@@ -157,30 +157,6 @@ FROM DRINK D, BILL B, BILL_INFO BI
 WHERE  BI.ID_BILL = B.ID AND BI.ID_DRINK = D.ID  AND ID_TABLE = 1788945
 
 ---------------------
-select * from BILL
-select * from BILL_INFO
-select * from DRINK
-select * from DRINK_CATEGORY
-select * from TABLE_DRINK
--------thêm category
-insert DRINK_CATEGORY
-	(NAME)
-value (n'Cà Phê')
-insert DRINK
-	(NAME)
-value (n'Sinh Tố')
-insert DRINK
-	(NAME)
-value (n'Yaoutr')
-insert DRINK
-	(NAME)
-value (n'Nước ngọt-Nước giải khác')
------thêm bill
-
-select * from BILL 
-go
-select * from BILL_INFO
-select * from DRINK
-select * from DRINK_CATEGORY
+SELECT D.NAME, BI.COUNT, D.PRICE, D.PRICE*BI.COUNT TotalPrice FROM DRINK D, BILL B, BILL_INFO BI WHERE  BI.ID_BILL = B.ID AND BI.ID_DRINK = D.ID  AND ID_TABLE = 5
 
 
