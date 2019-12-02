@@ -19,15 +19,18 @@ namespace Coffee_Managerment
         {
             InitializeComponent();
             LoadTable();
+            LoadCategory();
         }
         #region method
         void LoadCategory()
         {
-
+            List<Category> listCategory = CategoryDAO.Instance.GetListCategory();
+            cbCategory.DataSource = listCategory;
         }
-        void LoadDrinkList()
+        void LoadDrinkListByCategoryID(int id)
         {
-
+            List<Drink> listDrink = DrinkDAO.Instance.GetDrinkByCategoryID(id);
+            cbDrink.DataSource = listDrink;
         }
         void LoadTable()
         {
@@ -102,6 +105,16 @@ namespace Coffee_Managerment
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+        private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int id = 0;
+            ComboBox cb = sender as ComboBox;
+            if (cb.SelectedItem == null)
+                return;
+            Category selected = cb.SelectedItem as Category;
+            id = selected.ID;
+            LoadDrinkListByCategoryID(id);
         }
         #endregion
     }

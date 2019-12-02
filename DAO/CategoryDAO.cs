@@ -24,7 +24,7 @@ namespace Coffee_Managerment.DAO
             List<Category> list = new List<Category>();
             string query = "select * from Drink_Category";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            foreach (DataRow item in data.Rows)
+            foreach (DataRow item in data.Rows) 
             {
                 Category category = new Category(item);
                 list.Add(category);

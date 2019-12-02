@@ -21,7 +21,7 @@ namespace Coffee_Managerment.DTO
         {
             this.ID = (int)row["id"];
             this.Name = row["name"].ToString();
-            this.CategoryID = (int)row["idCategory"];
+            this.CategoryID = (int)row["idcategory"];
             this.Price = (float)Convert.ToDouble(row["price"].ToString());
         }
 
