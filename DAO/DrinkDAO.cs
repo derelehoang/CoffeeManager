@@ -29,7 +29,7 @@ namespace Coffee_Managerment.DAO
                 Drink drink = new Drink(item);
                 list.Add(drink);
             }
-            System.Diagnostics.Debug.WriteLine(list.ToString()+"List");
+            //System.Diagnostics.Debug.WriteLine(list.ToString()+"List");
             return list;
         }
     }
