@@ -22,7 +22,7 @@ namespace Coffee_Managerment.DAO
         public List<Category> GetListCategory()
         {
             List<Category> list = new List<Category>();
-            string query = "select * from Drink_Category";
+            string query = "select * from DRINK_CATEGORY";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows) 
             {
