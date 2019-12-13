@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace Coffee_Managerment.DAO
 {
@@ -36,6 +37,7 @@ namespace Coffee_Managerment.DAO
                    int i=0;
                    foreach (string item in listPara)
 	                {
+                        Debug.WriteLine(listPara);
 		                if(item.Contains('@'))
                         {
                             command.Parameters.AddWithValue(item, Parameter[i]);
@@ -67,6 +69,7 @@ namespace Coffee_Managerment.DAO
                    int i = 0;
                    foreach (string item in listPara)
                    {
+                       Debug.WriteLine(item);
                        if (item.Contains('@'))
                        {
                            command.Parameters.AddWithValue(item, Parameter[i]);

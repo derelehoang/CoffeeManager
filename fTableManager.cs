@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
+using System.Diagnostics;
+
 
 namespace Coffee_Managerment
 {
@@ -27,6 +29,7 @@ namespace Coffee_Managerment
             List<Category> listCategory = CategoryDAO.Instance.GetListCategory();
             cbCategory.DataSource = listCategory;
             cbCategory.DisplayMember = "NAME";
+            
         }
         void LoadDrinkListByCategoryID(int id)
         {
@@ -110,6 +113,7 @@ namespace Coffee_Managerment
         }
         private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
+           
             int id = 0;
             ComboBox cb = sender as ComboBox;
             if (cb.SelectedItem == null)
@@ -117,6 +121,7 @@ namespace Coffee_Managerment
             Category selected = cb.SelectedItem as Category;
             id = selected.ID;
             LoadDrinkListByCategoryID(id);
+            
         }
         
         #endregion

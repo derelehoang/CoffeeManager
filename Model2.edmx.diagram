@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cd308c83c9b34a2ea31a689c45b72612" Name="Diagram1">
+        <EntityTypeShape EntityType="COFFEE_MANAGERMENTModel.ACCOUNT" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="COFFEE_MANAGERMENTModel.BILL" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="COFFEE_MANAGERMENTModel.BILL_INFO" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="COFFEE_MANAGERMENTModel.DRINK" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="COFFEE_MANAGERMENTModel.DRINK_CATEGORY" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="COFFEE_MANAGERMENTModel.TABLE_DRINK" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <AssociationConnector Association="COFFEE_MANAGERMENTModel.FK__BILL__STATUS__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="COFFEE_MANAGERMENTModel.FK__BILL_INFO__COUNT__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="COFFEE_MANAGERMENTModel.FK__BILL_INFO__ID_DR__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="COFFEE_MANAGERMENTModel.FK__DRINK__PRICE__440B1D61" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

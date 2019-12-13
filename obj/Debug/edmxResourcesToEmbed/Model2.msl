@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="COFFEE_MANAGERMENTModelStoreContainer" CdmEntityContainer="COFFEE_MANAGERMENTEntities">
+    <EntitySetMapping Name="ACCOUNTs">
+      <EntityTypeMapping TypeName="COFFEE_MANAGERMENTModel.ACCOUNT">
+        <MappingFragment StoreEntitySet="ACCOUNT">
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="DISPLAYNAME" ColumnName="DISPLAYNAME" />
+          <ScalarProperty Name="PASS" ColumnName="PASS" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BILLs">
+      <EntityTypeMapping TypeName="COFFEE_MANAGERMENTModel.BILL">
+        <MappingFragment StoreEntitySet="BILL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DATE_CHECKIN" ColumnName="DATE_CHECKIN" />
+          <ScalarProperty Name="DATE_CHECKOUT" ColumnName="DATE_CHECKOUT" />
+          <ScalarProperty Name="ID_TABLE" ColumnName="ID_TABLE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BILL_INFO">
+      <EntityTypeMapping TypeName="COFFEE_MANAGERMENTModel.BILL_INFO">
+        <MappingFragment StoreEntitySet="BILL_INFO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_BILL" ColumnName="ID_BILL" />
+          <ScalarProperty Name="ID_DRINK" ColumnName="ID_DRINK" />
+          <ScalarProperty Name="COUNT" ColumnName="COUNT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DRINKs">
+      <EntityTypeMapping TypeName="COFFEE_MANAGERMENTModel.DRINK">
+        <MappingFragment StoreEntitySet="DRINK">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ID_CATEGORY" ColumnName="ID_CATEGORY" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DRINK_CATEGORY">
+      <EntityTypeMapping TypeName="COFFEE_MANAGERMENTModel.DRINK_CATEGORY">
+        <MappingFragment StoreEntitySet="DRINK_CATEGORY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TABLE_DRINK">
+      <EntityTypeMapping TypeName="COFFEE_MANAGERMENTModel.TABLE_DRINK">
+        <MappingFragment StoreEntitySet="TABLE_DRINK">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
