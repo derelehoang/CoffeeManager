@@ -9,17 +9,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace Coffee_Managerment
 {
-    public partial class fTableManager : Form
+    public partial class TableManager : Form
     {
-        public fTableManager()
+        public TableManager()
         {
             InitializeComponent();
             LoadTable();
+            LoadCategory();
         }
         #region method
+        void LoadCategory()
+        {
+            List<Category> listCategory = CategoryDAO.Instance.GetListCategory();
+            cbCategory.DataSource = listCategory;
+            cbCategory.DisplayMember = "Name";
+        }
+        void LoadDrinkListByCategoryID(int id)
+        {
+            List<Drink> listDrink = DrinkDAO.Instance.GetDrinkByCategoryID(id);
+            cbDrink.DataSource = listDrink;
+            cbDrink.DisplayMember = "Name";
+        }
         void LoadTable()
         {
             List<Table> tableList = TableDAO.Instance.LoadTableList();
@@ -55,17 +69,19 @@ namespace Coffee_Managerment
         {
             lsvBill.Items.Clear();
             List<Coffee_Managerment.DTO.Menu> listBillInfo = MenuDAO.Instance.GetListMenuByTable(id);
-
+            float totalPrice = 0;
             foreach (Coffee_Managerment.DTO.Menu item in listBillInfo)
             {
                 ListViewItem lsvItem = new ListViewItem(item.DrinkName.ToString());
                 lsvItem.SubItems.Add(item.Count.ToString());
                 lsvItem.SubItems.Add(item.Price.ToString());
                 lsvItem.SubItems.Add(item.TotalPrice.ToString());
-
+                totalPrice += item.TotalPrice;
                 lsvBill.Items.Add(lsvItem);
 
             }
+            CultureInfo culture = new CultureInfo("vi-VN");
+            txbTotalPrice.Text = totalPrice.ToString("c",culture);
         }
         
         #endregion
@@ -91,6 +107,16 @@ namespace Coffee_Managerment
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+        private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int id = 0;
+            ComboBox cb = sender as ComboBox;
+            if (cb.SelectedItem == null)
+                return;
+            Category selected = cb.SelectedItem as Category;
+            id = selected.ID;
+            LoadDrinkListByCategoryID(id);
         }
         #endregion
     }

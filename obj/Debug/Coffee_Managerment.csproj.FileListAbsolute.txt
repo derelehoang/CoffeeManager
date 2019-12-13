@@ -2,13 +2,10 @@ D:\C#\Coffee_Managerment\bin\Debug\Coffee_Managerment.exe.config
 D:\C#\Coffee_Managerment\bin\Debug\Coffee_Managerment.exe
 D:\C#\Coffee_Managerment\bin\Debug\Coffee_Managerment.pdb
 D:\C#\Coffee_Managerment\obj\Debug\Coffee_Managerment.csprojResolveAssemblyReference.cache
-D:\C#\Coffee_Managerment\obj\Debug\Coffee_Managerment.fLogin.resources
 D:\C#\Coffee_Managerment\obj\Debug\Coffee_Managerment.Properties.Resources.resources
 D:\C#\Coffee_Managerment\obj\Debug\Coffee_Managerment.csproj.GenerateResource.Cache
 D:\C#\Coffee_Managerment\obj\Debug\Coffee_Managerment.exe
 D:\C#\Coffee_Managerment\obj\Debug\Coffee_Managerment.pdb
-D:\C#\Coffee_Managerment\obj\Debug\Coffee_Managerment.fTableManager.resources
-D:\C#\Coffee_Managerment\obj\Debug\Coffee_Managerment.fAccountProFile.resources
 D:\C#\Coffee_Managerment\obj\Debug\Coffee_Managerment.fAdmin.resources
 D:\C#\Coffee_Managerment\bin\Debug\EntityFramework.dll
 D:\C#\Coffee_Managerment\bin\Debug\EntityFramework.SqlServer.dll
@@ -30,3 +27,4 @@ E:\C#\CoffeeManager\obj\Debug\Coffee_Managerment.fLogin.resources
 E:\C#\CoffeeManager\obj\Debug\Coffee_Managerment.fTableManager.resources
 E:\C#\CoffeeManager\obj\Debug\Coffee_Managerment.Properties.Resources.resources
 E:\C#\CoffeeManager\obj\Debug\Coffee_Managerment.csproj.GenerateResource.Cache
+D:\C#\Coffee_Managerment\obj\Debug\Coffee_Managerment.TableManager.resources

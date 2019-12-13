@@ -53,53 +53,69 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\AccountDAO.cs" />
-    <Compile Include="DAO\BillDAO.cs" />
-    <Compile Include="DAO\BilllInfoDAO.cs" />
-    <Compile Include="DAO\DataProvider.cs" />
-    <Compile Include="DAO\MenuDAO.cs" />
-    <Compile Include="DAO\TableDAO.cs" />
-    <Compile Include="DTO\Bill.cs" />
-    <Compile Include="DTO\BillInfo.cs" />
-    <Compile Include="DTO\Menu.cs" />
-    <Compile Include="DTO\Table.cs" />
-    <Compile Include="fAccountProFile.cs">
-      <SubType>Form</SubType>
+    <Compile Include="BILL.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="fAccountProFile.Designer.cs">
-      <DependentUpon>fAccountProFile.cs</DependentUpon>
+    <Compile Include="BILL_INFO.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="CoffeeManagerment.cs" />
+    <Compile Include="DERE\BillD.cs" />
+    <Compile Include="DERE\BilllInfoD.cs" />
+    <Compile Include="DERE\CategoryD.cs" />
+    <Compile Include="DERE\DataProvider.cs" />
+    <Compile Include="DERE\DrinkDAO.cs" />
+    <Compile Include="DERE\MenuDAO.cs" />
+    <Compile Include="DERE\TableDAO.cs" />
+    <Compile Include="DRINK.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DRINK_CATEGORY.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HOANG\Bill.cs" />
+    <Compile Include="HOANG\BillInfo.cs" />
+    <Compile Include="HOANG\Category.cs" />
+    <Compile Include="HOANG\Drink.cs" />
+    <Compile Include="HOANG\Menu.cs" />
+    <Compile Include="HOANG\Table.cs" />
     <Compile Include="fAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fAdmin.Designer.cs">
       <DependentUpon>fAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="fLogin.cs">
+    <Compile Include="TableManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fLogin.Designer.cs">
-      <DependentUpon>fLogin.cs</DependentUpon>
+    <Compile Include="TableManager.Designer.cs">
+      <DependentUpon>TableManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="fTableManager.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="fTableManager.Designer.cs">
-      <DependentUpon>fTableManager.cs</DependentUpon>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="fAccountProFile.resx">
-      <DependentUpon>fAccountProFile.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="TABLE_DRINK.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="fAdmin.resx">
       <DependentUpon>fAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fLogin.resx">
-      <DependentUpon>fLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fTableManager.resx">
-      <DependentUpon>fTableManager.cs</DependentUpon>
+    <EmbeddedResource Include="TableManager.resx">
+      <DependentUpon>TableManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,6 +126,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

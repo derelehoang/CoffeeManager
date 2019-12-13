@@ -19,8 +19,9 @@ namespace Coffee_Managerment.DAO
         }
 
         private DataProvider() { }
-       private string connectionSTR = @"Data Source=DESKTOP-IKCEBER\PHUONGANH;Initial Catalog=COFFEE_MANAGERMENT;
-                                        User ID=sa; Password=110220";
+        private string connectionSTR = @"Data Source=DESKTOP-IKCEBER\PHUONGANH;Initial Catalog=COFFEE_MANAGERMENT;User ID=sa; Password=110220";
+
+        //private string connectionSTR = @"D:\C#\Coffee_Managerment\Model1.Context.cs";
        public object ExecuteScalar(string query, object[] Parameter = null)
        {
            object data = 0;
@@ -111,7 +112,7 @@ namespace Coffee_Managerment.DAO
                connection.Close();
            }
 
-           return data;
+           return data; 
        }
     }
 }

@@ -2,12 +2,12 @@
 <Schema Namespace="COFFEE_MANAGERMENTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="ACCOUNT">
     <Key>
-      <PropertyRef Name="USRERNAME" />
+      <PropertyRef Name="USERNAME" />
     </Key>
-    <Property Name="USRERNAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="USERNAME" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="DISPLAYNAME" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="PASSWORD" Type="nvarchar" MaxLength="1000" Nullable="false" />
-    <Property Name="TYPE" Type="int" />
+    <Property Name="PASS" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TYPE" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="BILL">
     <Key>
@@ -35,7 +35,7 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="ID_CATEGORY" Type="int" Nullable="false" />
-    <Property Name="PRICE" Type="float" />
+    <Property Name="PRICE" Type="float" Nullable="false" />
   </EntityType>
   <EntityType Name="DRINK_CATEGORY">
     <Key>
@@ -52,7 +52,7 @@
     <Property Name="NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="STATUS" Type="nvarchar" MaxLength="100" />
   </EntityType>
-  <Association Name="FK__BILL__ID_TABLE__1CF15040">
+  <Association Name="FK__BILL__STATUS__48CFD27E">
     <End Role="TABLE_DRINK" Type="Self.TABLE_DRINK" Multiplicity="1" />
     <End Role="BILL" Type="Self.BILL" Multiplicity="*" />
     <ReferentialConstraint>
@@ -64,7 +64,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BILL_INFO__COUNT__20C1E124">
+  <Association Name="FK__BILL_INFO__COUNT__4CA06362">
     <End Role="BILL" Type="Self.BILL" Multiplicity="1" />
     <End Role="BILL_INFO" Type="Self.BILL_INFO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -76,7 +76,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BILL_INFO__ID_DR__21B6055D">
+  <Association Name="FK__BILL_INFO__ID_DR__4D94879B">
     <End Role="DRINK" Type="Self.DRINK" Multiplicity="1" />
     <End Role="BILL_INFO" Type="Self.BILL_INFO" Multiplicity="*" />
     <ReferentialConstraint>
@@ -88,6 +88,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__DRINK__PRICE__440B1D61">
+    <End Role="DRINK_CATEGORY" Type="Self.DRINK_CATEGORY" Multiplicity="1" />
+    <End Role="DRINK" Type="Self.DRINK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DRINK_CATEGORY">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DRINK">
+        <PropertyRef Name="ID_CATEGORY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="COFFEE_MANAGERMENTModelStoreContainer">
     <EntitySet Name="ACCOUNT" EntityType="Self.ACCOUNT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BILL" EntityType="Self.BILL" Schema="dbo" store:Type="Tables" />
@@ -95,17 +107,21 @@
     <EntitySet Name="DRINK" EntityType="Self.DRINK" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DRINK_CATEGORY" EntityType="Self.DRINK_CATEGORY" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TABLE_DRINK" EntityType="Self.TABLE_DRINK" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__BILL__ID_TABLE__1CF15040" Association="Self.FK__BILL__ID_TABLE__1CF15040">
+    <AssociationSet Name="FK__BILL__STATUS__48CFD27E" Association="Self.FK__BILL__STATUS__48CFD27E">
       <End Role="TABLE_DRINK" EntitySet="TABLE_DRINK" />
       <End Role="BILL" EntitySet="BILL" />
     </AssociationSet>
-    <AssociationSet Name="FK__BILL_INFO__COUNT__20C1E124" Association="Self.FK__BILL_INFO__COUNT__20C1E124">
+    <AssociationSet Name="FK__BILL_INFO__COUNT__4CA06362" Association="Self.FK__BILL_INFO__COUNT__4CA06362">
       <End Role="BILL" EntitySet="BILL" />
       <End Role="BILL_INFO" EntitySet="BILL_INFO" />
     </AssociationSet>
-    <AssociationSet Name="FK__BILL_INFO__ID_DR__21B6055D" Association="Self.FK__BILL_INFO__ID_DR__21B6055D">
+    <AssociationSet Name="FK__BILL_INFO__ID_DR__4D94879B" Association="Self.FK__BILL_INFO__ID_DR__4D94879B">
       <End Role="DRINK" EntitySet="DRINK" />
       <End Role="BILL_INFO" EntitySet="BILL_INFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DRINK__PRICE__440B1D61" Association="Self.FK__DRINK__PRICE__440B1D61">
+      <End Role="DRINK_CATEGORY" EntitySet="DRINK_CATEGORY" />
+      <End Role="DRINK" EntitySet="DRINK" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -24,7 +24,7 @@ namespace Coffee_Managerment.DAO
             List<Menu> ListMenu = new List<Menu>();
             
 
-            string query = "SELECT D.NAME, BI.COUNT, D.PRICE, D.PRICE*BI.COUNT TotalPrice FROM DRINK D, BILL B, BILL_INFO BI WHERE  BI.ID_BILL = B.ID AND BI.ID_DRINK = D.ID  AND ID_TABLE = "  + id;
+            string query = "SELECT D.NAME, BI.COUNT, D.PRICE, D.PRICE*BI.COUNT TotalPrice FROM DRINK D, BILL B, BILL_INFO BI WHERE  BI.ID_BILL = B.ID AND BI.ID_DRINK = D.ID AND ID_TABLE = "  + id;
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 

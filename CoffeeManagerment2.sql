@@ -139,11 +139,11 @@ GETDATE(),
 0),
 (GETDATE(),
 GETDATE(),
-1788946,
+1788949,
 0),
 (GETDATE(),
 GETDATE(),
-1788947,
+1788953,
 1)
 
 --drop table BILL
@@ -157,11 +157,6 @@ FROM DRINK D, BILL B, BILL_INFO BI
 WHERE  BI.ID_BILL = B.ID AND BI.ID_DRINK = D.ID  AND ID_TABLE = 1788945
 
 ---------------------
-select * from BILL
-select * from BILL_INFO
-select * from DRINK
-select * from DRINK_CATEGORY
-select * from TABLE_DRINK
--------------------------------------
+SELECT D.NAME, BI.COUNT, D.PRICE, D.PRICE*BI.COUNT TotalPrice FROM DRINK D, BILL B, BILL_INFO BI WHERE  BI.ID_BILL = B.ID AND BI.ID_DRINK = D.ID  AND ID_TABLE = 5
 
 
