@@ -13,10 +13,10 @@ namespace Coffee_Managerment
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class COFFEE_MANAGERMENTEntities : DbContext
+    public partial class COFFEE_MANAGERMENTEntities5 : DbContext
     {
-        public COFFEE_MANAGERMENTEntities()
-            : base("name=COFFEE_MANAGERMENTEntities")
+        public COFFEE_MANAGERMENTEntities5():
+             base("name=COFFEE_MANAGERMENTEntities5")
         {
         }
     
@@ -25,7 +25,6 @@ namespace Coffee_Managerment
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<ACCOUNT> ACCOUNTs { get; set; }
         public virtual DbSet<BILL> BILLs { get; set; }
         public virtual DbSet<BILL_INFO> BILL_INFO { get; set; }
         public virtual DbSet<DRINK> DRINKs { get; set; }

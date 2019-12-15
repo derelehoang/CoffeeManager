@@ -5,15 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="COFFEE_MANAGERMENTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="ACCOUNT">
-          <Key>
-            <PropertyRef Name="USERNAME" />
-          </Key>
-          <Property Name="USERNAME" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="DISPLAYNAME" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="PASS" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="TYPE" Type="int" Nullable="false" />
-        </EntityType>
         <EntityType Name="BILL">
           <Key>
             <PropertyRef Name="ID" />
@@ -106,7 +97,6 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="COFFEE_MANAGERMENTModelStoreContainer">
-          <EntitySet Name="ACCOUNT" EntityType="Self.ACCOUNT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BILL" EntityType="Self.BILL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BILL_INFO" EntityType="Self.BILL_INFO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DRINK" EntityType="Self.DRINK" Schema="dbo" store:Type="Tables" />
@@ -134,15 +124,6 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="COFFEE_MANAGERMENTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="ACCOUNT">
-          <Key>
-            <PropertyRef Name="USERNAME" />
-          </Key>
-          <Property Name="USERNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="DISPLAYNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="PASS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="TYPE" Type="Int32" Nullable="false" />
-        </EntityType>
         <EntityType Name="BILL">
           <Key>
             <PropertyRef Name="ID" />
@@ -242,8 +223,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="COFFEE_MANAGERMENTEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="ACCOUNTs" EntityType="Self.ACCOUNT" />
+        <EntityContainer Name="COFFEE_MANAGERMENTEntities5" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="BILLs" EntityType="Self.BILL" />
           <EntitySet Name="BILL_INFO" EntityType="Self.BILL_INFO" />
           <EntitySet Name="DRINKs" EntityType="Self.DRINK" />
@@ -271,17 +251,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="COFFEE_MANAGERMENTModelStoreContainer" CdmEntityContainer="COFFEE_MANAGERMENTEntities">
-          <EntitySetMapping Name="ACCOUNTs">
-            <EntityTypeMapping TypeName="COFFEE_MANAGERMENTModel.ACCOUNT">
-              <MappingFragment StoreEntitySet="ACCOUNT">
-                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
-                <ScalarProperty Name="DISPLAYNAME" ColumnName="DISPLAYNAME" />
-                <ScalarProperty Name="PASS" ColumnName="PASS" />
-                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
+        <EntityContainerMapping StorageEntityContainer="COFFEE_MANAGERMENTModelStoreContainer" CdmEntityContainer="COFFEE_MANAGERMENTEntities5">
           <EntitySetMapping Name="BILLs">
             <EntityTypeMapping TypeName="COFFEE_MANAGERMENTModel.BILL">
               <MappingFragment StoreEntitySet="BILL">

@@ -93,8 +93,9 @@ namespace Coffee_Managerment
 
         void btn_Click(object sender, EventArgs e)
         {
-            int TableID =((sender as Button).Tag as Table).ID;
-            ShowBill(TableID);
+            int tableID = ((sender as Button).Tag as Table).ID;
+            lsvBill.Tag = (sender as Button).Tag;
+            ShowBill(tableID);
         }
 
         private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
@@ -125,5 +126,26 @@ namespace Coffee_Managerment
         }
         
         #endregion
+
+        private void btnAddDrink_Click(object sender, EventArgs e)
+        {
+            Table table = lsvBill.Tag as Table;
+
+            int idBill = BillDAO.Instance.GetUnCheckBillIDByTableID(table.ID);
+            int drinkID = (cbDrink.SelectedItem as Drink).ID;
+            int count = (int)nmDrinkCount.Value;
+
+            if (idBill == -1)
+            {
+                BillDAO.Instance.InsertBill(table.ID);
+               BilllInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxIDBill(), drinkID, count);
+            }
+            else
+            {
+               BilllInfoDAO.Instance.InsertBillInfo(idBill, drinkID, count);
+            }
+
+            ShowBill(table.ID);
+        }
     }
 }

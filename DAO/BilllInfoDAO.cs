@@ -34,5 +34,9 @@ namespace Coffee_Managerment.DAO
 
             return listBillInfo;
         }
+        public void InsertBillInfo(int idBill, int idDrink, int count)
+        {
+            DataProvider.Instance.ExecuteNonQuery("USP_InsertBillInfo @idBill , @id_Drink , @count", new object[] { idBill, idDrink, count});
+        }
     }
 }

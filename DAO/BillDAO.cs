@@ -22,7 +22,7 @@ namespace Coffee_Managerment.DAO
 
         public int GetUnCheckBillIDByTableID(int id)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("select * from BILL where ID_TABLE = "+ id +" and STATUS = 0");
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from BILL where ID_TABLE = " + id + " and STATUS = 0");
 
             if (data.Rows.Count > 0)
             {
@@ -30,8 +30,24 @@ namespace Coffee_Managerment.DAO
                 return bill.ID;
             }
             return -1;
+        }
 
             //Thành công: Bill ID -- Thất bại: -1
+            public void InsertBill(int id)
+        {
+            DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill @idTable", new object[]{id});
+        }
+
+        public int GetMaxIDBill()
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExecuteScalar("SELECT MAX(id) FROM dbo.Bill");
+            }
+            catch
+            {
+                return 1;
+            }   
         }
     }
 }

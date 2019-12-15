@@ -1,16 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="COFFEE_MANAGERMENTModelStoreContainer" CdmEntityContainer="COFFEE_MANAGERMENTEntities">
-    <EntitySetMapping Name="ACCOUNTs">
-      <EntityTypeMapping TypeName="COFFEE_MANAGERMENTModel.ACCOUNT">
-        <MappingFragment StoreEntitySet="ACCOUNT">
-          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
-          <ScalarProperty Name="DISPLAYNAME" ColumnName="DISPLAYNAME" />
-          <ScalarProperty Name="PASS" ColumnName="PASS" />
-          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
+  <EntityContainerMapping StorageEntityContainer="COFFEE_MANAGERMENTModelStoreContainer" CdmEntityContainer="COFFEE_MANAGERMENTEntities5">
     <EntitySetMapping Name="BILLs">
       <EntityTypeMapping TypeName="COFFEE_MANAGERMENTModel.BILL">
         <MappingFragment StoreEntitySet="BILL">

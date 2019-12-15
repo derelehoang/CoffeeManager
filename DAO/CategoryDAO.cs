@@ -26,7 +26,7 @@ namespace Coffee_Managerment.DAO
 
             List<Category> list = new List<Category>();
             string query = "select * from DRINK_CATEGORY";
-            using (COFFEE_MANAGERMENTEntities db = new COFFEE_MANAGERMENTEntities())
+            using (COFFEE_MANAGERMENTEntities5 db = new COFFEE_MANAGERMENTEntities5())
             {
                 var select = from s in db.DRINK_CATEGORY select s;
                 //Debug.WriteLine(select);

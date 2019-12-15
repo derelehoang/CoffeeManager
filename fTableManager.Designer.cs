@@ -40,24 +40,24 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txbTotalPrice = new System.Windows.Forms.TextBox();
             this.nmCount = new System.Windows.Forms.NumericUpDown();
             this.btnSwichTable = new System.Windows.Forms.Button();
             this.cbSwichTable = new System.Windows.Forms.ComboBox();
             this.btnGiamGia = new System.Windows.Forms.Button();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.nmDrink = new System.Windows.Forms.NumericUpDown();
+            this.nmDrinkCount = new System.Windows.Forms.NumericUpDown();
             this.btnAddDrink = new System.Windows.Forms.Button();
             this.cbDrink = new System.Windows.Forms.ComboBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
-            this.txbTotalPrice = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmCount)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmDrink)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmDrinkCount)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -162,6 +162,18 @@
             this.panel3.Size = new System.Drawing.Size(404, 56);
             this.panel3.TabIndex = 3;
             // 
+            // txbTotalPrice
+            // 
+            this.txbTotalPrice.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbTotalPrice.ForeColor = System.Drawing.Color.Red;
+            this.txbTotalPrice.Location = new System.Drawing.Point(206, 14);
+            this.txbTotalPrice.Name = "txbTotalPrice";
+            this.txbTotalPrice.ReadOnly = true;
+            this.txbTotalPrice.Size = new System.Drawing.Size(104, 28);
+            this.txbTotalPrice.TabIndex = 3;
+            this.txbTotalPrice.Text = "0";
+            this.txbTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // nmCount
             // 
             this.nmCount.Location = new System.Drawing.Point(103, 28);
@@ -212,7 +224,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.nmDrink);
+            this.panel4.Controls.Add(this.nmDrinkCount);
             this.panel4.Controls.Add(this.btnAddDrink);
             this.panel4.Controls.Add(this.cbDrink);
             this.panel4.Controls.Add(this.cbCategory);
@@ -222,19 +234,19 @@
             this.panel4.Size = new System.Drawing.Size(404, 61);
             this.panel4.TabIndex = 4;
             // 
-            // nmDrink
+            // nmDrinkCount
             // 
-            this.nmDrink.Location = new System.Drawing.Point(336, 16);
-            this.nmDrink.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nmDrink.Minimum = new decimal(new int[] {
+            this.nmDrinkCount.Location = new System.Drawing.Point(336, 16);
+            this.nmDrinkCount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nmDrinkCount.Minimum = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
-            this.nmDrink.Name = "nmDrink";
-            this.nmDrink.Size = new System.Drawing.Size(68, 22);
-            this.nmDrink.TabIndex = 2;
-            this.nmDrink.Value = new decimal(new int[] {
+            this.nmDrinkCount.Name = "nmDrinkCount";
+            this.nmDrinkCount.Size = new System.Drawing.Size(68, 22);
+            this.nmDrinkCount.TabIndex = 2;
+            this.nmDrinkCount.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -249,6 +261,7 @@
             this.btnAddDrink.TabIndex = 1;
             this.btnAddDrink.Text = "Add";
             this.btnAddDrink.UseVisualStyleBackColor = true;
+            this.btnAddDrink.Click += new System.EventHandler(this.btnAddDrink_Click);
             // 
             // cbDrink
             // 
@@ -268,7 +281,6 @@
             this.cbCategory.Size = new System.Drawing.Size(218, 24);
             this.cbCategory.TabIndex = 0;
             this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
-
             // 
             // flpTable
             // 
@@ -278,18 +290,6 @@
             this.flpTable.Name = "flpTable";
             this.flpTable.Size = new System.Drawing.Size(524, 451);
             this.flpTable.TabIndex = 5;
-            // 
-            // txbTotalPrice
-            // 
-            this.txbTotalPrice.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTotalPrice.ForeColor = System.Drawing.Color.Red;
-            this.txbTotalPrice.Location = new System.Drawing.Point(206, 14);
-            this.txbTotalPrice.Name = "txbTotalPrice";
-            this.txbTotalPrice.ReadOnly = true;
-            this.txbTotalPrice.Size = new System.Drawing.Size(104, 28);
-            this.txbTotalPrice.TabIndex = 3;
-            this.txbTotalPrice.Text = "0";
-            this.txbTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // fTableManager
             // 
@@ -313,7 +313,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmCount)).EndInit();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nmDrink)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmDrinkCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,7 +335,7 @@
         private System.Windows.Forms.Button btnGiamGia;
         private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.NumericUpDown nmDrink;
+        private System.Windows.Forms.NumericUpDown nmDrinkCount;
         private System.Windows.Forms.Button btnAddDrink;
         private System.Windows.Forms.ComboBox cbDrink;
         private System.Windows.Forms.ComboBox cbCategory;
